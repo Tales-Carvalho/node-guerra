@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WAR</title>
+        <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="node_modules/socket.io/client-dist/socket.io.min.js"></script>
+        <script type="text/javascript" src="client.js" defer></script>
+    </head>
+    <body>
+        <div id='player-login'>
+            <form id='login'>
+                <input type='text' placeholder='Nickname' name='nick' />
+                <select name='color'>
+                    <option value=''>Select your color</option>
+                    <option value='white'>White</option>
+                    <option value='blue'>Blue</option>
+                    <option value='red'>Red</option>
+                    <option value='yellow'>Yellow</option>
+                    <option value='green'>Green</option>
+                    <option value='black'>Black</option>
+                </select>
+                <input type='submit' value='Join' />
+            </form>
+        </div>
+        <div id='game-board' style='display: none;'>
+            WELCOME TO THE GAME
+        </div>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  game-server:
+    build:
+      context: ./
+      target: dev
+    container_name: game-server
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+    command: npm run start:dev
+    environment: 
+      NODE_ENV: development

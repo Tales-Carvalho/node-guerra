@@ -7,9 +7,9 @@ const response = (req, res) => {
     let file = ''
     
     if (req.url === '/')
-        file = __dirname + '/index.html'
+        file = process.cwd() + '/index.html'
     else
-        file = __dirname + req.url
+        file = process.cwd() + '/' + req.url
 
     fs.readFile(file, (err, data) => {
         if (err) {
@@ -46,6 +46,7 @@ const io = require('socket.io')(app)
 
 io.on('connection', (socket) => {
     socket.on('join', (data, callback) => {
+        // TODO: check color availability and register player
         console.log('join: ' + data.nick)
         callback(true)
     })

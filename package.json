@@ -1,12 +1,12 @@
 {
   "name": "guerra",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Guerra game built on Node.js",
-  "main": "server.js",
+  "main": "server/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "start:dev": "nodemon server.js"
+    "start": "node server/app.js",
+    "start:dev": "nodemon server/app.js"
   },
   "repository": {
     "type": "git",

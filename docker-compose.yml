@@ -3,7 +3,7 @@ services:
   game-server:
     build:
       context: ./
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
       target: dev
     container_name: game-server
     volumes:
@@ -11,6 +11,5 @@ services:
       - /app/node_modules
     ports:
       - "3000:3000"
-    command: npm run start:dev
     environment: 
       NODE_ENV: development

@@ -1,8 +1,0 @@
-FROM node:14-alpine as production
-
-WORKDIR /app
-COPY package*.json /app/
-ENV NODE_ENV=production
-RUN npm ci
-COPY . /app
-CMD ["node", "server.js"]

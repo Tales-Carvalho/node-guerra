@@ -1,9 +1,7 @@
-FROM node:14-alpine as base
+FROM node:14-alpine as production
 
 WORKDIR /app
 COPY package*.json /app/
-
-FROM base as production
 ENV NODE_ENV=production
 RUN npm ci
 COPY . /app

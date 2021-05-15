@@ -3,6 +3,7 @@ services:
   game-server:
     build:
       context: ./
+      dockerfile: Dockerfile.dev
       target: dev
     container_name: game-server
     volumes:

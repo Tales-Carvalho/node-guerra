@@ -27,7 +27,19 @@ console.log('Listening in http://localhost:3000')
 
 // Game internal variables
 
-const players = {
+const gameState = {
+    players: {
+        white: '',
+        blue: '',
+        red: '',
+        yellow: '',
+        green: '',
+        black: ''
+    }
+    // TODO: general game info: armies, cards, etc.
+}
+
+const objectives = { // TODO: on game start, get a random objective for each player
     white: '',
     blue: '',
     red: '',
@@ -36,18 +48,33 @@ const players = {
     black: ''
 }
 
-const gameState = {
-    // TODO: info de exercitos em territorios, cartas de cada jogador, etc.
-}
-
 // Socket handling
 
 const io = require('socket.io')(app)
 
 io.on('connection', (socket) => {
-    socket.on('join', (data, callback) => {
-        // TODO: check color availability and register player
-        console.log('join: ' + data.nick)
-        callback(true)
+    socket.on('join', (loginData, callback) => {
+        // TODO: validate color and nick
+        if (gameState.players[loginData.color] == '') {
+            socket.color = loginData.color
+            socket.nick = loginData.nick
+            gameState.players[loginData.color] = loginData.nick
+            io.sockets.emit('gameState', gameState)
+            console.log('Player connected: ' + loginData.nick + ' (' + loginData.color + ')')
+            callback(true)
+        }
+        else {
+            console.log(loginData.nick + ' could not join because ' + loginData.color + ' was already picked.')
+            callback(false)
+        }
+        console.log(JSON.stringify(gameState))
+    })
+
+    socket.on('disconnect', () => {
+        if (gameState.players[socket.color]) // Catch case that socket.color is undefined
+            gameState.players[socket.color] = ''
+        io.sockets.emit('gameState', gameState)
+        console.log('Player disconnected: ' + socket.nick + ' (' + socket.color + ')')
+        console.log(JSON.stringify(gameState))
     })
 })

@@ -25,3 +25,8 @@ $('form#login').on('submit', (e) => {
         }
     })
 })
+
+socket.on('gameState', gameState => {
+    // TODO: update board and players area
+    console.log(gameState)
+})

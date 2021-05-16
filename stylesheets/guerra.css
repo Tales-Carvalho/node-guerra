@@ -21,6 +21,8 @@ div#game-left-col, div#game-right-col {
 }
 
 div#game-center {
+    font-size: 10px;
+    color: white;
     width: 780px;
     background-color: darkblue;
     background-image: url('/images/map.png');
@@ -57,7 +59,7 @@ div.player-info#black-info {
 
 div.territory-info {
     display: block;
-    width: 200px;
+    width: 100px;
     position: relative;
 }
 
@@ -66,22 +68,26 @@ p.territory-controls, p.territory-name {
     margin-bottom: 2px;
 }
 
-p.territory-controls>button, p.territory-controls>span {
+p.territory-controls>button {
+    font-size: 8px;
     text-align: center;
     border-radius: 8px;
-    width: 10px;
-    height: 15px;
+    width: 5px;
+    height: 10px;
 }
 
 p.territory-controls>span {
+    border-radius: 8px;
     border: 1px solid black;
 }
 
 div.territory-info.army-none>p>span {
     background-color: gray;
+    color: black;
 }
 div.territory-info.army-white>p>span {
     background-color: white;
+    color: black;
 }
 div.territory-info.army-blue>p>span {
     background-color: blue;
@@ -89,12 +95,15 @@ div.territory-info.army-blue>p>span {
 }
 div.territory-info.army-red>p>span {
     background-color: red;
+    color: black;
 }
 div.territory-info.army-yellow>p>span {
     background-color: yellow;
+    color: black;
 }
 div.territory-info.army-green>p>span {
     background-color: green;
+    color: black;
 }
 div.territory-info.army-black>p>span {
     background-color: black;

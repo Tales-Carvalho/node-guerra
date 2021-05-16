@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>WAR</title>
+        <meta charset="UTF-8">
+        <title>O Jogo da Guerra™</title>
+        <link rel="stylesheet" href="stylesheets/guerra.css">
         <script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
         <script type="text/javascript" src="../node_modules/socket.io/client-dist/socket.io.min.js"></script>
         <script type="text/javascript" src="client/main.js" defer></script>
@@ -22,8 +24,73 @@
                 <input type='submit' value='Join' />
             </form>
         </div>
-        <div id='game-board' style='display: none;'>
-            Game under construction!
+        <div id='game-board'>
+            <div id='game-area'>
+                <div id='game-left-col'>
+                    <div class='player-info' id='white-info'>
+                        <p class='player-name'>Unknown</p>
+                        <p class='player-armies'><span class='player-armies-value'>0</span> armies</p>
+                        <p class='player-territories'><span class='player-territories-value'>0</span> territories</p>
+                        <p class='player-cards'><span class='player-cards-value'>0</span> cards</p>
+                    </div>
+                    <div class='player-info' id='blue-info'>
+                        <p class='player-name'>Unknown</p>
+                        <p class='player-armies'><span class='player-armies-value'>0</span> armies</p>
+                        <p class='player-territories'><span class='player-territories-value'>0</span> territories</p>
+                        <p class='player-cards'><span class='player-cards-value'>0</span> cards</p>
+                    </div>
+                    <div class='player-info' id='red-info'>
+                        <p class='player-name'>Unknown</p>
+                        <p class='player-armies'><span class='player-armies-value'>0</span> armies</p>
+                        <p class='player-territories'><span class='player-territories-value'>0</span> territories</p>
+                        <p class='player-cards'><span class='player-cards-value'>0</span> cards</p>
+                    </div>
+                </div>
+                <div id='game-center'>
+                </div>
+                <div id='game-right-col'>
+                    <div class='player-info' id='yellow-info'>
+                        <p class='player-name'>Unknown</p>
+                        <p class='player-armies'><span class='player-armies-value'>0</span> armies</p>
+                        <p class='player-territories'><span class='player-territories-value'>0</span> territories</p>
+                        <p class='player-cards'><span class='player-cards-value'>0</span> cards</p>
+                    </div>
+                    <div class='player-info' id='green-info'>
+                        <p class='player-name'>Unknown</p>
+                        <p class='player-armies'><span class='player-armies-value'>0</span> armies</p>
+                        <p class='player-territories'><span class='player-territories-value'>0</span> territories</p>
+                        <p class='player-cards'><span class='player-cards-value'>0</span> cards</p>
+                    </div>
+                    <div class='player-info' id='black-info'>
+                        <p class='player-name'>Unknown</p>
+                        <p class='player-armies'><span class='player-armies-value'>0</span> armies</p>
+                        <p class='player-territories'><span class='player-territories-value'>0</span> territories</p>
+                        <p class='player-cards'><span class='player-cards-value'>0</span> cards</p>
+                    </div>
+                </div>
+            </div>
+            <div id='cards-area'>
+                <div class='card-container card-inactive' id='card1'>
+                    <p class='card-header'>Brasiu</p>
+                    <p class='card-center'>0</p>
+                </div>
+                <div class='card-container card-inactive' id='card2'>
+                    <p class='card-header'>Brasiu</p>
+                    <p class='card-center'>0</p>
+                </div>
+                <div class='card-container card-inactive' id='card3'>
+                    <p class='card-header'>Brasiu</p>
+                    <p class='card-center'>0</p>
+                </div>
+                <div class='card-container card-inactive' id='card4'>
+                    <p class='card-header'>Brasiu</p>
+                    <p class='card-center'>0</p>
+                </div>
+                <div class='card-container card-inactive' id='card5'>
+                    <p class='card-header'>Brasiu</p>
+                    <p class='card-center'>0</p>
+                </div>
+            </div>
         </div>
     </body>
 </html>

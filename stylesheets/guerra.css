@@ -1,0 +1,128 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: content-box;
+}
+
+div#game-board {
+    display: none;
+}
+
+div#game-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+div#game-left-col, div#game-right-col {
+    width: 195px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+div#game-center {
+    width: 780px;
+    background-color: darkblue;
+    background-image: url('/images/map.png');
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+div.player-info {
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+div.player-info#white-info {
+    background-color: white;
+}
+div.player-info#blue-info {
+    background-color: blue;
+    color: white;
+}
+div.player-info#red-info {
+    background-color: red;
+}
+div.player-info#yellow-info {
+    background-color: yellow;
+}
+div.player-info#green-info {
+    background-color: green;
+}
+div.player-info#black-info {
+    background-color: black;
+    color: lightgray;
+}
+
+div.territory-info {
+    display: block;
+    width: 200px;
+    position: relative;
+}
+
+p.territory-controls, p.territory-name {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+p.territory-controls>button, p.territory-controls>span {
+    text-align: center;
+    border-radius: 8px;
+    width: 10px;
+    height: 15px;
+}
+
+p.territory-controls>span {
+    border: 1px solid black;
+}
+
+div.territory-info.army-none>p>span {
+    background-color: gray;
+}
+div.territory-info.army-white>p>span {
+    background-color: white;
+}
+div.territory-info.army-blue>p>span {
+    background-color: blue;
+    color: white;
+}
+div.territory-info.army-red>p>span {
+    background-color: red;
+}
+div.territory-info.army-yellow>p>span {
+    background-color: yellow;
+}
+div.territory-info.army-green>p>span {
+    background-color: green;
+}
+div.territory-info.army-black>p>span {
+    background-color: black;
+    color: white;
+}
+
+div#cards-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+div.card-container {
+    width: 150px;
+    margin: 10px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+div.player-info>p {
+    text-align: center;
+}
+
+div.territory-info>p {
+    text-align: center;
+}
+
+div.card-container>p {
+    text-align: center;
+}

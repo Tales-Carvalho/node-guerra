@@ -35,8 +35,16 @@ const gameState = {
         yellow: '',
         green: '',
         black: ''
-    }
+    },
+    territories: {}
     // TODO: general game info: armies, cards, etc.
+}
+
+for (t of require('../data/territories.json')) {
+    gameState.territories[t.id] = {
+        count: 0,
+        color: 'none'
+    }
 }
 
 const objectives = { // TODO: on game start, get a random objective for each player
@@ -76,5 +84,28 @@ io.on('connection', (socket) => {
         io.sockets.emit('gameState', gameState)
         console.log('Player disconnected: ' + socket.nick + ' (' + socket.color + ')')
         console.log(JSON.stringify(gameState))
+    })
+
+    socket.on('addArmy', territoryId => {
+        if (gameState.territories[territoryId].color == socket.color || gameState.territories[territoryId].color == 'none') {
+            gameState.territories[territoryId].count ++
+            gameState.territories[territoryId].color = socket.color
+            io.sockets.emit('gameState', gameState)
+            console.log('Player ' + socket.color + ' adds an army to ' + territoryId)
+        }
+    })
+
+    socket.on('removeArmy', territoryId => {
+        if (gameState.territories[territoryId].count == 0) {
+            return
+        }
+        if (gameState.territories[territoryId].color == socket.color) {
+            gameState.territories[territoryId].count --
+            if (gameState.territories[territoryId].count == 0) {
+                gameState.territories[territoryId].color = 'none'
+            }
+            io.sockets.emit('gameState', gameState)
+            console.log('Player ' + socket.color + ' removes an army from ' + territoryId)
+        }
     })
 })

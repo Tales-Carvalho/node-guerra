@@ -21,11 +21,9 @@ div#game-left-col, div#game-right-col {
 }
 
 div#game-center {
+    position: relative;
     font-size: 10px;
     color: white;
-    width: 780px;
-    background-color: darkblue;
-    background-image: url('/images/map.png');
     border: 1px solid black;
     border-radius: 5px;
 }
@@ -60,7 +58,7 @@ div.player-info#black-info {
 div.territory-info {
     display: block;
     width: 100px;
-    position: relative;
+    position: absolute;
 }
 
 p.territory-controls, p.territory-name {

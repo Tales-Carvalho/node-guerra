@@ -7,11 +7,11 @@ $.getJSON('data/territories.json', json => {
         $divWrapper.css('left', t.x + 'px')
         $divWrapper.append($('<p/>').attr('class', 'territory-name').text(t.name))
         const $pControls = $('<p/>').attr('class', 'territory-controls')
-        $pControls.append($('<button/>').attr('class', 'army-remove').text('-').on('click', () => {
+        $pControls.append($('<button/>').attr('class', 'army-control army-remove').text('-').on('click', () => {
             socket.emit('removeArmy', t.id)
         }))
         $pControls.append($('<span/>').attr('class', 'army-count').text('0'))
-        $pControls.append($('<button/>').attr('class', 'army-add').text('+').on('click', () => {
+        $pControls.append($('<button/>').attr('class', 'army-control army-add').text('+').on('click', () => {
             socket.emit('addArmy', t.id)
         }))
         $divWrapper.append($pControls)
@@ -45,16 +45,27 @@ $('form#login').on('submit', (e) => {
     })
 })
 
+$('button#objective-btn').on('click', (e) => {
+    socket.emit('requestObjective', (response) => {
+        window.alert('Your objective is:\n' + response)
+    })
+})
+
 socket.on('gameState', gameState => {
     // Players update
-    $('#white-info>p.player-name').text(gameState.players.white == '' ? 'Unknown' : gameState.players.white)
-    $('#blue-info>p.player-name').text(gameState.players.blue == '' ? 'Unknown' : gameState.players.blue)
-    $('#red-info>p.player-name').text(gameState.players.red == '' ? 'Unknown' : gameState.players.red)
-    $('#yellow-info>p.player-name').text(gameState.players.yellow == '' ? 'Unknown' : gameState.players.yellow)
-    $('#green-info>p.player-name').text(gameState.players.green == '' ? 'Unknown' : gameState.players.green)
-    $('#black-info>p.player-name').text(gameState.players.black == '' ? 'Unknown' : gameState.players.black)
+    ['white', 'blue', 'red', 'yellow', 'green', 'black'].forEach(c => {
+        // Player name update (text of player-name inside color-info)
+        $('#' + c + '-info p.player-name').text(gameState.players[c].nick == '' ? '-----' : gameState.players[c].nick)
+        // Player counts update (text of spans inside color-info)
+        $('#' + c + '-info span.player-armies-value').text(gameState.players[c].armies)
+        $('#' + c + '-info span.player-territories-value').text(gameState.players[c].territories)
+        $('#' + c + '-info span.player-cards-value').text(gameState.players[c].cards)
+    })
     // Armies update
-    $('.territory-info').each(() => {
-        
+    Object.keys(gameState.territories).forEach(t => {
+        // Color update (class of territory id)
+        $('#' + t).attr('class', 'territory-info army-' + gameState.territories[t].color)
+        // Count update (text of span)
+        $('#' + t + ' span.army-count').text(gameState.territories[t].count)
     })
 })

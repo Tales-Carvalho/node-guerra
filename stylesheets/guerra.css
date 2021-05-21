@@ -24,6 +24,9 @@ div#game-center {
     position: relative;
     font-size: 10px;
     color: white;
+}
+
+div#game-center img {
     border: 1px solid black;
     border-radius: 5px;
 }
@@ -62,48 +65,56 @@ div.territory-info {
 }
 
 p.territory-controls, p.territory-name {
+    font-weight: bold;
     margin-top: 2px;
     margin-bottom: 2px;
 }
 
-p.territory-controls>button {
-    font-size: 8px;
-    text-align: center;
-    border-radius: 8px;
-    width: 5px;
-    height: 10px;
+p.territory-controls button.army-control {
+    font-family: monospace;
+    font-weight: bolder;
+    font-size: smaller;
+    /* background: transparent; */
+    color: black;
+    padding: 0px 3px;
+    vertical-align: middle;
+    margin-left: 2px;
+    margin-right: 2px;
 }
 
-p.territory-controls>span {
+p.territory-controls span.army-count {
+    font-family: monospace;
     border-radius: 8px;
     border: 1px solid black;
+    padding: 1px 4px;
+    vertical-align: middle;
 }
 
-div.territory-info.army-none>p>span {
+div.territory-info.army-none span.army-count {
     background-color: gray;
     color: black;
 }
-div.territory-info.army-white>p>span {
+div.territory-info.army-white span.army-count {
     background-color: white;
     color: black;
 }
-div.territory-info.army-blue>p>span {
+div.territory-info.army-blue span.army-count {
     background-color: blue;
     color: white;
 }
-div.territory-info.army-red>p>span {
+div.territory-info.army-red span.army-count {
     background-color: red;
     color: black;
 }
-div.territory-info.army-yellow>p>span {
+div.territory-info.army-yellow span.army-count {
     background-color: yellow;
     color: black;
 }
-div.territory-info.army-green>p>span {
+div.territory-info.army-green span.army-count {
     background-color: green;
     color: black;
 }
-div.territory-info.army-black>p>span {
+div.territory-info.army-black span.army-count {
     background-color: black;
     color: white;
 }

@@ -4,5 +4,299 @@
         "name": "Brazil",
         "x": 200,
         "y": 310
+    },
+    
+    {
+        "id": "territory-argentina",
+        "name": "Argentina",
+        "x": 150,
+        "y": 390
+    },
+    
+    {
+        "id": "territory-paraguay",
+        "name": "Paraguay",
+        "x": 140,
+        "y": 330
+    },
+    
+    {
+        "id": "territory-venezuela",
+        "name": "Venezuela",
+        "x": 145,
+        "y": 255
+    },
+    
+    {
+        "id": "territory-mexico",
+        "name": "Mexico",
+        "x": 95,
+        "y": 220
+    },
+    
+    {
+        "id": "territory-cuba",
+        "name": "Cuba",
+        "x": 175,
+        "y": 220
+    },
+    
+    {
+        "id": "territory-newyork",
+        "name": "New York",
+        "x": 150,
+        "y": 165
+    },
+    
+    {
+        "id": "territory-california",
+        "name": "California",
+        "x": 75,
+        "y": 150
+    },
+    
+    {
+        "id": "territory-vancouver",
+        "name": "Vancouver",
+        "x": 70,
+        "y": 100
+    },
+    
+    {
+        "id": "territory-ottawa",
+        "name": "Ottawa",
+        "x": 128,
+        "y": 107
+    },
+    
+    {
+        "id": "territory-labrador",
+        "name": "Labrador",
+        "x": 190,
+        "y": 100
+    },
+    
+    {
+        "id": "territory-mackenzie",
+        "name": "Mackenzie",
+        "x": 95,
+        "y": 55
+    },
+    
+    {
+        "id": "territory-alaska",
+        "name": "Alaska",
+        "x": 15,
+        "y": 50
+    },
+    
+    {
+        "id": "territory-greenland",
+        "name": "Greenland",
+        "x": 220,
+        "y": 25
+    },
+    
+    {
+        "id": "territory-moscow",
+        "name": "Moscow",
+        "x": 410,
+        "y": 115
+    },
+    
+    {
+        "id": "territory-finland",
+        "name": "Finland",
+        "x": 350,
+        "y": 70
+    },
+    
+    {
+        "id": "territory-iceland",
+        "name": "Iceland",
+        "x": 282,
+        "y": 72
+    },
+    
+    {
+        "id": "territory-england",
+        "name": "England",
+        "x": 280,
+        "y": 130
+    },
+    
+    {
+        "id": "territory-france",
+        "name": "France",
+        "x": 280,
+        "y": 215
+    },
+    
+    {
+        "id": "territory-germany",
+        "name": "Germany",
+        "x": 340,
+        "y": 150
+    },
+    
+    {
+        "id": "territory-italy",
+        "name": "Italy",
+        "x": 350,
+        "y": 190
+    },
+    
+    {
+        "id": "territory-algeria",
+        "name": "Algeria",
+        "x": 315,
+        "y": 295
+    },
+    
+    {
+        "id": "territory-egypt",
+        "name": "Egypt",
+        "x": 385,
+        "y": 265
+    },
+    
+    {
+        "id": "territory-sudan",
+        "name": "Sudan",
+        "x": 425,
+        "y": 330
+    },
+    
+    {
+        "id": "territory-congo",
+        "name": "Congo",
+        "x": 370,
+        "y": 355
+    },
+    
+    {
+        "id": "territory-safrica",
+        "name": "S. Africa",
+        "x": 375,
+        "y": 415
+    },
+    
+    {
+        "id": "territory-madagascar",
+        "name": "Madagascar",
+        "x": 445,
+        "y": 425
+    },
+    
+    {
+        "id": "territory-middle-east",
+        "name": "M. East",
+        "x": 435,
+        "y": 225
+    },
+    
+    {
+        "id": "territory-india",
+        "name": "India",
+        "x": 515,
+        "y": 235
+    },
+    
+    {
+        "id": "territory-vietnam",
+        "name": "Vietnam",
+        "x": 580,
+        "y": 265
+    },
+    
+    {
+        "id": "territory-japan",
+        "name": "Japan",
+        "x": 660,
+        "y": 160
+    },
+    
+    {
+        "id": "territory-vladivostok",
+        "name": "Vladivostok",
+        "x": 655,
+        "y": 40
+    },
+    
+    {
+        "id": "territory-kazakhstan",
+        "name": "Kazakhstan",
+        "x": 475,
+        "y": 165
+    },
+    
+    {
+        "id": "territory-china",
+        "name": "China",
+        "x": 570,
+        "y": 205
+    },
+    
+    {
+        "id": "territory-omsk",
+        "name": "Omsk",
+        "x": 485,
+        "y": 100
+    },
+    
+    {
+        "id": "territory-siberia",
+        "name": "Siberia",
+        "x": 525,
+        "y": 55
+    },
+    
+    {
+        "id": "territory-manchuria",
+        "name": "Manchuria",
+        "x": 580,
+        "y": 155
+    },
+    
+    {
+        "id": "territory-chita",
+        "name": "Chita",
+        "x": 575,
+        "y": 100
+    },
+    
+    {
+        "id": "territory-sakha",
+        "name": "Sakha",
+        "x": 580,
+        "y": 40
+    },
+    
+    {
+        "id": "territory-newguinea",
+        "name": "New Guinea",
+        "x": 660,
+        "y": 325
+    },
+    
+    {
+        "id": "territory-indonesia",
+        "name": "Indonesia",
+        "x": 585,
+        "y": 340
+    },
+    
+    {
+        "id": "territory-waustralia",
+        "name": "W. Australia",
+        "x": 610,
+        "y": 405
+    },
+    
+    {
+        "id": "territory-eaustralia",
+        "name": "E. Australia",
+        "x": 685,
+        "y": 395
     }
 ]

@@ -1,7 +1,7 @@
 const socket = io.connect()
 
 $.getJSON('data/territories.json', json => {
-    for (t of json) {
+    for (const t of json) {
         const $divWrapper = $('<div/>').attr('class', 'territory-info army-none').attr('id', t.id)
         $divWrapper.css('top', t.y + 'px')
         $divWrapper.css('left', t.x + 'px')
